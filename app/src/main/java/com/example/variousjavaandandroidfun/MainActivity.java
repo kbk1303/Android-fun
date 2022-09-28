@@ -38,13 +38,14 @@ public class MainActivity extends AppCompatActivity {
                             }
                         });
                         System.err.println("future: "+future.get());
+                        executor.shutdown();
                         break;
                     } catch (InterruptedException | ExecutionException e) {
                         e.printStackTrace();
                     }
                 }
             }
-            executor.shutdown();
+
         }).start();
 
 
